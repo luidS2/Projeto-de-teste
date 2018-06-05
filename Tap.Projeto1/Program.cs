@@ -23,7 +23,7 @@ namespace Tap.Projeto1
         {
             //268 - Jury Size - Força Bruta	http://codeforces.com/problemset/problem/254/B	
             Console.WriteLine("268 - Jury Size - Força Bruta");
-
+            //lasodlasd
             //Teste 1 output 2
             var jurySize = new JurySize("Teste 1 Força Bruta.txt");
             Console.WriteLine("Teste 1 output: " + jurySize.ObterNumeroMinimoDePessoas());
