@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ED5A2D2E-99C3-4315-B611-6DCA128BFB36}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tap.Teste</RootNamespace>
+    <AssemblyName>Tap.Teste</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="csUnit, Version=2.2.2740.26492, Culture=neutral, PublicKeyToken=6871f04765cca910, processorArchitecture=MSIL">
+      <HintPath>..\packages\csUnit.1.0.1\lib\csUnit.dll</HintPath>
+    </Reference>
+    <Reference Include="csUnit.Common, Version=2.2.2740.26492, Culture=neutral, PublicKeyToken=6871f04765cca910, processorArchitecture=MSIL">
+      <HintPath>..\packages\csUnit.1.0.1\lib\csUnit.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\TentativaErro.cs" />
+    <Compile Include="Classes\DivisaoConquista.cs" />
+    <Compile Include="Classes\ProgramacaoDinamica.cs" />
+    <Compile Include="Classes\AlgoritmoGuloso.cs" />
+    <Compile Include="Classes\TesteForcaBruta.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hexagonal.Puzzle\Hexagonal.Puzzle.csproj">
+      <Project>{71BCCBF0-2FDC-4002-8AAA-374E6040ED5F}</Project>
+      <Name>Hexagonal.Puzzle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jury.Size\Jury.Size.csproj">
+      <Project>{2E504BB8-11BA-450E-AAA5-00423A734E0F}</Project>
+      <Name>Jury.Size</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logo.Turtle\Logo.Turtle.csproj">
+      <Project>{6A5C0D73-31FA-4F5F-AF96-5729E866ED01}</Project>
+      <Name>Logo.Turtle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Permutation\Permutation.csproj">
+      <Project>{7D787071-75AC-4A2C-A836-58CF6B75F1C3}</Project>
+      <Name>Permutation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quick.Tortoise\Quick.Tortoise.csproj">
+      <Project>{0443B531-A43C-4D27-AC6F-861129A15713}</Project>
+      <Name>Quick.Tortoise</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
